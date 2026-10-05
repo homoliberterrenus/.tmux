@@ -432,6 +432,11 @@ bind - split-window -v
 bind v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
 bind C-v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
 
+# put back original prev/next window bindings
+# copy and paste handle through sys clipboard
+bind p previous-window #!important
+bind n next-window #!important
+
 # -- tpm -----------------------------------------------------------------------
 
 # while I don't use tpm myself, many people requested official support so here
