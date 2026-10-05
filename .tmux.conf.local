@@ -428,6 +428,10 @@ unbind _
 bind | split-window -h
 bind - split-window -v
 
+# paste from clipboard
+bind v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
+bind C-v run "tmux set-buffer \"$(xclip -o -sel clipboard)\"; tmux paste-buffer"
+
 # -- tpm -----------------------------------------------------------------------
 
 # while I don't use tpm myself, many people requested official support so here
