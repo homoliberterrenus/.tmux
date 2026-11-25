@@ -431,7 +431,7 @@ bind v run "printf %s \"$(wl-paste -n -t text)\" | tmux load-buffer -b clip - &&
 bind C-v run "printf %s \"$(wl-paste -n -t text)\" | tmux load-buffer -b clip - && tmux paste-buffer -dp -b clip || true"
 
 # put back original prev/next window bindings
-# copy and paste handle through sys clipboard
+# p no longer pastes the tmux buffer: use v / C-v for the system clipboard, ] for the tmux buffer
 bind p previous-window #!important
 bind n next-window #!important
 
