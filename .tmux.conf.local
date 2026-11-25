@@ -427,8 +427,8 @@ unbind _
 bind | split-window -h
 
 # paste from clipboard
-bind v run "printf %s \"$(wl-paste -n)\" | tmux load-buffer -b clip - && tmux paste-buffer -dp -b clip"
-bind C-v run "printf %s \"$(wl-paste -n)\" | tmux load-buffer -b clip - && tmux paste-buffer -dp -b clip"
+bind v run "printf %s \"$(wl-paste -n -t text)\" | tmux load-buffer -b clip - && tmux paste-buffer -dp -b clip"
+bind C-v run "printf %s \"$(wl-paste -n -t text)\" | tmux load-buffer -b clip - && tmux paste-buffer -dp -b clip"
 
 # put back original prev/next window bindings
 # copy and paste handle through sys clipboard
