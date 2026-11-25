@@ -16,6 +16,22 @@
   </picture>
 </p>
 
+Installing this fork
+--------------------
+
+This fork keeps its customizations in `.tmux.conf.local`, on the `main` branch.
+
+```
+$ git clone https://github.com/homoliberterrenus/.tmux.git /path/to/oh-my-tmux
+$ mkdir -p ~/.config/tmux
+$ ln -s /path/to/oh-my-tmux/.tmux.conf ~/.config/tmux/tmux.conf
+$ ln -s /path/to/oh-my-tmux/.tmux.conf.local ~/.config/tmux/tmux.conf.local
+```
+
+⚠️ Move any existing configuration out of the way first. Don't use `install.sh`
+as it installs upstream by default, and copies `.tmux.conf.local` instead of
+symlinking it.
+
 Installation
 ------------
 
