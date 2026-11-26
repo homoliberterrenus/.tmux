@@ -426,6 +426,9 @@ bind C-a send-prefix
 unbind _
 bind | split-window -h
 
+# auto-name windows as "<dirname>•<program>"; the index is prepended by the status format
+set -g automatic-rename-format '#{b:pane_current_path}•#{pane_current_command}'
+
 # paste from clipboard
 bind v run "printf %s \"$(wl-paste -n -t text)\" | tmux load-buffer -b clip - && tmux paste-buffer -dp -b clip || true"
 bind C-v run "printf %s \"$(wl-paste -n -t text)\" | tmux load-buffer -b clip - && tmux paste-buffer -dp -b clip || true"
